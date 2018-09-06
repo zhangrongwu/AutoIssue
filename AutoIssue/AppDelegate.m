@@ -7,6 +7,9 @@
 //
 
 #import "AppDelegate.h"
+#import "AFNetworking.h"
+#import "WKNavigationViewController.h"
+#import "WKRootViewController.h"
 
 @interface AppDelegate ()
 
@@ -16,10 +19,35 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    
     // Override point for customization after application launch.
+    [self startNetworkMonitoring];
+    WKRootViewController *rootVC = [[WKRootViewController alloc] init];
+    rootVC.miniProName = @"index";
+//    rootVC.miniProName = @"andong";
+
+    WKNavigationViewController *nav = [[WKNavigationViewController alloc] initWithRootViewController:rootVC];
+    nav.orientationMask = UIInterfaceOrientationMaskAll;
+    
+    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    [self.window setBackgroundColor:[UIColor whiteColor]];
+    [self.window setRootViewController:nav];
+    [self.window makeKeyAndVisible];
+    
     return YES;
 }
 
+- (void)startNetworkMonitoring{
+    AFNetworkReachabilityManager *manager = [AFNetworkReachabilityManager sharedManager];
+    [manager startMonitoring];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(networkingStatusDidChanged:) name:AFNetworkingReachabilityDidChangeNotification object:nil];
+}
+
+- (void)networkingStatusDidChanged:(NSNotification*)info{
+    NSDictionary *inforDict = [info userInfo];
+    NSLog(@"%@", inforDict);
+}
 
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.

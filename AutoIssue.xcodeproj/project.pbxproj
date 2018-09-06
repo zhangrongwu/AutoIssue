@@ -8,13 +8,22 @@
 
 /* Begin PBXBuildFile section */
 		426D9D2F213E52DF00122FE3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 426D9D2E213E52DE00122FE3 /* AppDelegate.m */; };
-		426D9D32213E52DF00122FE3 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 426D9D31213E52DF00122FE3 /* ViewController.m */; };
 		426D9D35213E52DF00122FE3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 426D9D33213E52DF00122FE3 /* Main.storyboard */; };
 		426D9D37213E52E000122FE3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 426D9D36213E52E000122FE3 /* Assets.xcassets */; };
 		426D9D3A213E52E000122FE3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 426D9D38213E52E000122FE3 /* LaunchScreen.storyboard */; };
 		426D9D3D213E52E000122FE3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 426D9D3C213E52E000122FE3 /* main.m */; };
 		426D9D47213E52E000122FE3 /* AutoIssueTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 426D9D46213E52E000122FE3 /* AutoIssueTests.m */; };
 		426D9D52213E52E000122FE3 /* AutoIssueUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 426D9D51213E52E000122FE3 /* AutoIssueUITests.m */; };
+		426D9D63213E616C00122FE3 /* WKFileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 426D9D62213E616C00122FE3 /* WKFileManager.m */; };
+		426D9D6E213E78DF00122FE3 /* WKNetworkDownLoadManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 426D9D6D213E78DF00122FE3 /* WKNetworkDownLoadManager.m */; };
+		426D9D74213F7E3400122FE3 /* WKMiniProgramManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 426D9D72213F7E3300122FE3 /* WKMiniProgramManager.m */; };
+		426D9D77213FAB7C00122FE3 /* WKRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 426D9D76213FAB7C00122FE3 /* WKRootViewController.m */; };
+		426D9D7A213FABD200122FE3 /* WKNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 426D9D79213FABD200122FE3 /* WKNavigationViewController.m */; };
+		426D9D7D213FAD0B00122FE3 /* WKProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 426D9D7C213FAD0B00122FE3 /* WKProgressView.m */; };
+		426D9D80213FAD5600122FE3 /* WKBottomView.m in Sources */ = {isa = PBXBuildFile; fileRef = 426D9D7F213FAD5600122FE3 /* WKBottomView.m */; };
+		426D9D88213FB50800122FE3 /* NSObject+WKExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 426D9D87213FB50800122FE3 /* NSObject+WKExtension.m */; };
+		426D9D8A213FCDCA00122FE3 /* index.zip in Resources */ = {isa = PBXBuildFile; fileRef = 426D9D89213FCDC900122FE3 /* index.zip */; };
+		EE6A6BF665C1D3BED66F060E /* libPods-AutoIssue.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 90BA2DE50194BED5CB352163 /* libPods-AutoIssue.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,11 +44,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		031488E52008C33AA2B042EF /* Pods-AutoIssue.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AutoIssue.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AutoIssue/Pods-AutoIssue.debug.xcconfig"; sourceTree = "<group>"; };
+		31D56EC0732F9B5653253F5D /* Pods-AutoIssue.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AutoIssue.release.xcconfig"; path = "Pods/Target Support Files/Pods-AutoIssue/Pods-AutoIssue.release.xcconfig"; sourceTree = "<group>"; };
 		426D9D2A213E52DE00122FE3 /* AutoIssue.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AutoIssue.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		426D9D2D213E52DE00122FE3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		426D9D2E213E52DE00122FE3 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		426D9D30213E52DF00122FE3 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		426D9D31213E52DF00122FE3 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		426D9D34213E52DF00122FE3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		426D9D36213E52E000122FE3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		426D9D39213E52E000122FE3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -51,6 +60,25 @@
 		426D9D4D213E52E000122FE3 /* AutoIssueUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AutoIssueUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		426D9D51213E52E000122FE3 /* AutoIssueUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AutoIssueUITests.m; sourceTree = "<group>"; };
 		426D9D53213E52E000122FE3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		426D9D61213E616C00122FE3 /* WKFileManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WKFileManager.h; sourceTree = "<group>"; };
+		426D9D62213E616C00122FE3 /* WKFileManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WKFileManager.m; sourceTree = "<group>"; };
+		426D9D6C213E78DF00122FE3 /* WKNetworkDownLoadManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WKNetworkDownLoadManager.h; sourceTree = "<group>"; };
+		426D9D6D213E78DF00122FE3 /* WKNetworkDownLoadManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WKNetworkDownLoadManager.m; sourceTree = "<group>"; };
+		426D9D72213F7E3300122FE3 /* WKMiniProgramManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WKMiniProgramManager.m; sourceTree = "<group>"; };
+		426D9D73213F7E3300122FE3 /* WKMiniProgramManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WKMiniProgramManager.h; sourceTree = "<group>"; };
+		426D9D75213FAB7C00122FE3 /* WKRootViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WKRootViewController.h; sourceTree = "<group>"; };
+		426D9D76213FAB7C00122FE3 /* WKRootViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WKRootViewController.m; sourceTree = "<group>"; };
+		426D9D78213FABD200122FE3 /* WKNavigationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WKNavigationViewController.h; sourceTree = "<group>"; };
+		426D9D79213FABD200122FE3 /* WKNavigationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WKNavigationViewController.m; sourceTree = "<group>"; };
+		426D9D7B213FAD0B00122FE3 /* WKProgressView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WKProgressView.h; sourceTree = "<group>"; };
+		426D9D7C213FAD0B00122FE3 /* WKProgressView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WKProgressView.m; sourceTree = "<group>"; };
+		426D9D7E213FAD5600122FE3 /* WKBottomView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WKBottomView.h; sourceTree = "<group>"; };
+		426D9D7F213FAD5600122FE3 /* WKBottomView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WKBottomView.m; sourceTree = "<group>"; };
+		426D9D81213FAEEF00122FE3 /* WKPrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WKPrefixHeader.pch; sourceTree = "<group>"; };
+		426D9D86213FB50800122FE3 /* NSObject+WKExtension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+WKExtension.h"; sourceTree = "<group>"; };
+		426D9D87213FB50800122FE3 /* NSObject+WKExtension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+WKExtension.m"; sourceTree = "<group>"; };
+		426D9D89213FCDC900122FE3 /* index.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = index.zip; sourceTree = "<group>"; };
+		90BA2DE50194BED5CB352163 /* libPods-AutoIssue.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AutoIssue.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +86,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EE6A6BF665C1D3BED66F060E /* libPods-AutoIssue.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,6 +114,8 @@
 				426D9D45213E52E000122FE3 /* AutoIssueTests */,
 				426D9D50213E52E000122FE3 /* AutoIssueUITests */,
 				426D9D2B213E52DE00122FE3 /* Products */,
+				912F62B6CF24EC1964177B56 /* Pods */,
+				B191174A62E40D93F73D44AE /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -101,15 +132,19 @@
 		426D9D2C213E52DE00122FE3 /* AutoIssue */ = {
 			isa = PBXGroup;
 			children = (
+				426D9D85213FB4AC00122FE3 /* Category */,
+				426D9D68213E6ADC00122FE3 /* Controller */,
+				426D9D67213E6AD200122FE3 /* View */,
+				426D9D66213E6AC700122FE3 /* Model */,
 				426D9D2D213E52DE00122FE3 /* AppDelegate.h */,
 				426D9D2E213E52DE00122FE3 /* AppDelegate.m */,
-				426D9D30213E52DF00122FE3 /* ViewController.h */,
-				426D9D31213E52DF00122FE3 /* ViewController.m */,
 				426D9D33213E52DF00122FE3 /* Main.storyboard */,
 				426D9D36213E52E000122FE3 /* Assets.xcassets */,
 				426D9D38213E52E000122FE3 /* LaunchScreen.storyboard */,
+				426D9D89213FCDC900122FE3 /* index.zip */,
 				426D9D3B213E52E000122FE3 /* Info.plist */,
 				426D9D3C213E52E000122FE3 /* main.m */,
+				426D9D81213FAEEF00122FE3 /* WKPrefixHeader.pch */,
 			);
 			path = AutoIssue;
 			sourceTree = "<group>";
@@ -132,6 +167,75 @@
 			path = AutoIssueUITests;
 			sourceTree = "<group>";
 		};
+		426D9D60213E60E600122FE3 /* FileManager */ = {
+			isa = PBXGroup;
+			children = (
+				426D9D61213E616C00122FE3 /* WKFileManager.h */,
+				426D9D62213E616C00122FE3 /* WKFileManager.m */,
+			);
+			path = FileManager;
+			sourceTree = "<group>";
+		};
+		426D9D66213E6AC700122FE3 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				426D9D60213E60E600122FE3 /* FileManager */,
+				426D9D6C213E78DF00122FE3 /* WKNetworkDownLoadManager.h */,
+				426D9D6D213E78DF00122FE3 /* WKNetworkDownLoadManager.m */,
+				426D9D73213F7E3300122FE3 /* WKMiniProgramManager.h */,
+				426D9D72213F7E3300122FE3 /* WKMiniProgramManager.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		426D9D67213E6AD200122FE3 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				426D9D7B213FAD0B00122FE3 /* WKProgressView.h */,
+				426D9D7C213FAD0B00122FE3 /* WKProgressView.m */,
+				426D9D7E213FAD5600122FE3 /* WKBottomView.h */,
+				426D9D7F213FAD5600122FE3 /* WKBottomView.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		426D9D68213E6ADC00122FE3 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				426D9D75213FAB7C00122FE3 /* WKRootViewController.h */,
+				426D9D76213FAB7C00122FE3 /* WKRootViewController.m */,
+				426D9D78213FABD200122FE3 /* WKNavigationViewController.h */,
+				426D9D79213FABD200122FE3 /* WKNavigationViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		426D9D85213FB4AC00122FE3 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				426D9D86213FB50800122FE3 /* NSObject+WKExtension.h */,
+				426D9D87213FB50800122FE3 /* NSObject+WKExtension.m */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		912F62B6CF24EC1964177B56 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				031488E52008C33AA2B042EF /* Pods-AutoIssue.debug.xcconfig */,
+				31D56EC0732F9B5653253F5D /* Pods-AutoIssue.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		B191174A62E40D93F73D44AE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				90BA2DE50194BED5CB352163 /* libPods-AutoIssue.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -139,9 +243,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 426D9D56213E52E000122FE3 /* Build configuration list for PBXNativeTarget "AutoIssue" */;
 			buildPhases = (
+				6530D488F5ECC579BA908D5A /* [CP] Check Pods Manifest.lock */,
 				426D9D26213E52DE00122FE3 /* Sources */,
 				426D9D27213E52DE00122FE3 /* Frameworks */,
 				426D9D28213E52DE00122FE3 /* Resources */,
+				198BAC7AB8BA0B149CF510F8 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -194,6 +300,7 @@
 		426D9D22213E52DE00122FE3 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = WK;
 				LastUpgradeCheck = 0940;
 				ORGANIZATIONNAME = ENN;
 				TargetAttributes = {
@@ -237,6 +344,7 @@
 			files = (
 				426D9D3A213E52E000122FE3 /* LaunchScreen.storyboard in Resources */,
 				426D9D37213E52E000122FE3 /* Assets.xcassets in Resources */,
+				426D9D8A213FCDCA00122FE3 /* index.zip in Resources */,
 				426D9D35213E52DF00122FE3 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -257,14 +365,60 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		198BAC7AB8BA0B149CF510F8 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-AutoIssue/Pods-AutoIssue-resources.sh",
+				"${PODS_ROOT}/SVProgressHUD/SVProgressHUD/SVProgressHUD.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/SVProgressHUD.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AutoIssue/Pods-AutoIssue-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6530D488F5ECC579BA908D5A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AutoIssue-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		426D9D26213E52DE00122FE3 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				426D9D32213E52DF00122FE3 /* ViewController.m in Sources */,
+				426D9D7A213FABD200122FE3 /* WKNavigationViewController.m in Sources */,
+				426D9D74213F7E3400122FE3 /* WKMiniProgramManager.m in Sources */,
 				426D9D3D213E52E000122FE3 /* main.m in Sources */,
+				426D9D77213FAB7C00122FE3 /* WKRootViewController.m in Sources */,
 				426D9D2F213E52DF00122FE3 /* AppDelegate.m in Sources */,
+				426D9D80213FAD5600122FE3 /* WKBottomView.m in Sources */,
+				426D9D7D213FAD0B00122FE3 /* WKProgressView.m in Sources */,
+				426D9D88213FB50800122FE3 /* NSObject+WKExtension.m in Sources */,
+				426D9D63213E616C00122FE3 /* WKFileManager.m in Sources */,
+				426D9D6E213E78DF00122FE3 /* WKNetworkDownLoadManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -431,11 +585,15 @@
 		};
 		426D9D57213E52E000122FE3 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 031488E52008C33AA2B042EF /* Pods-AutoIssue.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = HXA3E8963G;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = /Users/zhangrongwu/github/AutoIssue/AutoIssue/WKPrefixHeader.pch;
 				INFOPLIST_FILE = AutoIssue/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -448,11 +606,15 @@
 		};
 		426D9D58213E52E000122FE3 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 31D56EC0732F9B5653253F5D /* Pods-AutoIssue.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = HXA3E8963G;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = /Users/zhangrongwu/github/AutoIssue/AutoIssue/WKPrefixHeader.pch;
 				INFOPLIST_FILE = AutoIssue/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

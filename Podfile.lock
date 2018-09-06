@@ -1,0 +1,44 @@
+PODS:
+  - AFNetworking (3.2.1):
+    - AFNetworking/NSURLSession (= 3.2.1)
+    - AFNetworking/Reachability (= 3.2.1)
+    - AFNetworking/Security (= 3.2.1)
+    - AFNetworking/Serialization (= 3.2.1)
+    - AFNetworking/UIKit (= 3.2.1)
+  - AFNetworking/NSURLSession (3.2.1):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (3.2.1)
+  - AFNetworking/Security (3.2.1)
+  - AFNetworking/Serialization (3.2.1)
+  - AFNetworking/UIKit (3.2.1):
+    - AFNetworking/NSURLSession
+  - SDWebImage (4.4.1):
+    - SDWebImage/Core (= 4.4.1)
+  - SDWebImage/Core (4.4.1)
+  - SVProgressHUD (2.2.5)
+  - ZipArchive (1.4.0)
+
+DEPENDENCIES:
+  - AFNetworking
+  - SDWebImage
+  - SVProgressHUD
+  - ZipArchive
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - AFNetworking
+    - SDWebImage
+    - SVProgressHUD
+    - ZipArchive
+
+SPEC CHECKSUMS:
+  AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
+  SDWebImage: 47e9b5b925cbce75946c23f0c42dd19464189af4
+  SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
+  ZipArchive: e25a4373192673e3229ac8d6e9f64a3e5713c966
+
+PODFILE CHECKSUM: 64b73122c28bd0d373a0d3fef5511101adfe4338
+
+COCOAPODS: 1.5.3
