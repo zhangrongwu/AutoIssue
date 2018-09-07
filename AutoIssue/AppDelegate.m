@@ -23,8 +23,8 @@
     // Override point for customization after application launch.
     [self startNetworkMonitoring];
     WKRootViewController *rootVC = [[WKRootViewController alloc] init];
-    rootVC.miniProName = @"index";
-//    rootVC.miniProName = @"andong";
+//    rootVC.miniProName = @"index";
+    rootVC.miniProName = @"andong";
 
     WKNavigationViewController *nav = [[WKNavigationViewController alloc] initWithRootViewController:rootVC];
     nav.orientationMask = UIInterfaceOrientationMaskAll;

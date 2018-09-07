@@ -99,6 +99,7 @@
                                                                      //本地加载页面
                                                                      if (status) {
                                                                          [self loadRequestWithPath:basePath];
+                                                                         [WKFileManager removeFileAtPath:newFilePath];
                                                                      }
                                                                  }];
             } failure:^(NSError *error, NSInteger statusCode) {
