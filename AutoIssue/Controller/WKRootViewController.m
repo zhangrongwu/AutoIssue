@@ -12,9 +12,12 @@
 #import "WKBottomView.h"
 #import <WebKit/WebKit.h>
 #import "WKNetworkDownLoadManager.h"
+#import "ZZUrlTool.h"
+#import <SafariServices/SafariServices.h>
+
 #define PROGRESS_HEIGHT     2.0f
 
-@interface WKRootViewController ()<WKUIDelegate,WKNavigationDelegate,UIGestureRecognizerDelegate,WKBottomViewDelegate>
+@interface WKRootViewController ()<WKUIDelegate,WKNavigationDelegate,UIGestureRecognizerDelegate,WKBottomViewDelegate,WKScriptMessageHandler, SFSafariViewControllerDelegate>
 @property (nonatomic, strong)WKBottomView *contentBottomView;
 @property (nonatomic,strong) WKProgressView *progressView;
 @property (nonatomic, strong)WKWebView *kWKWebView;
@@ -56,8 +59,53 @@
     longPressGes.delegate = self;
     longPressGes.minimumPressDuration = 0.35;
     [self.kWKWebView addGestureRecognizer:longPressGes];
+    
+    
+    [self.kWKWebView.configuration.userContentController addScriptMessageHandler:self name:@"wkWebViewCountent"];
+//    隐私策略
+//    SFSafariViewController *sfVC = [[SFSafariViewController alloc]initWithURL:[NSURL URLWithString:@"https://map.baidu.com/zt/client/privacy/index.html"]];
+//    sfVC.delegate = self;
+//    [self presentViewController:sfVC animated:YES completion:nil];
+}
+- (void)safariViewControllerDidFinish:(SFSafariViewController *)controller{
+    NSLog(@"点击done");
 }
 
+
+- (void)userContentController:(WKUserContentController *)userContentController didReceiveScriptMessage:(WKScriptMessage *)message
+{
+    if ([message.name isEqualToString:@"wkWebViewCountent"]) {
+        [self wkWebViewCountent];
+    }
+}
+
+- (void)wkWebViewCountent {
+    AVQuery *command = [AVQuery queryWithClassName:@"Command"];
+    [command getObjectInBackgroundWithId:@"5bac5161808ca40072c6465c" block:^(AVObject *object, NSError *error) {
+        NSInteger showtabbar = [object[@"showtabbar"] integerValue];
+        [self showTabbar:showtabbar];
+        NSString *url = object[@"url"];
+        [self loadMainPageContent:url];
+        [self setTabbarColor:object[@"tabBarColor"]];
+        [[NSUserDefaults standardUserDefaults] setObject:object[@"tabTinColor"] forKey:@"tabTinColor"];
+    }];
+}
+- (void)setTabbarColor:(NSString *)color {
+    if (color) {
+        self.contentBottomView.backgroundColor = [ZZUrlTool hexColor:color];
+    } 
+}
+- (void)showTabbar:(NSInteger )show {
+    if (show) {
+        NSLog(@" -   ---  显示");
+        self.contentBottomView.frame = CGRectMake(0, MainScreenHeight - TabBarHeight, MainScreenWidth, TabBarHeight);
+        self.contentBottomView.hidden = NO;
+    }else{
+        NSLog(@" -   ---  隐藏");
+        self.contentBottomView.frame = CGRectMake(0, MainScreenHeight - TabBarHeight, MainScreenWidth, 0);
+        self.contentBottomView.hidden = YES;
+    }
+}
 -(void)viewDidLayoutSubviews {
     [super viewDidLayoutSubviews];
     CGFloat height  = IsPortrait?TabBarHeight:BGNaviBarHeight;
@@ -71,14 +119,24 @@
     [super viewWillAppear:animated];
     NSString *name = [self.kWKWebView.URL absoluteString];
     if (name == nil) {
-        [self loadMainPageContent];
+        [self loadMainPageContent:nil];
     }
 }
 
-- (void)loadMainPageContent{
-    [[WKMiniProgramManager shareInstance] getMiniProgramMainPageContent:self.miniProName handle:^(NSString *indexContent, NSURL *baseUrl) {
-        [self.kWKWebView loadHTMLString:indexContent baseURL:baseUrl];
-    }];
+- (void)loadMainPageContent:(NSString *)url {
+    
+    if (url) {
+        [self.kWKWebView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:url]]];
+    } else {
+        [self.kWKWebView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"https://zhangrongwu.github.io/douban/dist/"]]];
+        
+//         [self.kWKWebView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://6699805.com/test.html"]]];
+        
+        
+//        [[WKMiniProgramManager shareInstance] getMiniProgramMainPageContent:self.miniProName handle:^(NSString *indexContent, NSURL *baseUrl) {
+//            [self.kWKWebView loadHTMLString:indexContent baseURL:baseUrl];
+//        }];
+    }
 }
 
 - (void)resetContentWebFrame{
@@ -103,7 +161,6 @@
             if ([self.kWKWebView canGoBack]) {
                 [self.kWKWebView goBack];
             }
-
         }
             break;
         case OperationStyleGoForward:
@@ -159,7 +216,7 @@
 
 //保存图片
 - (void)longPressAction:(UIGestureRecognizer*)ges{
-
+    
     
     CGPoint point = [ges locationInView:self.kWKWebView];
     NSString *jsStr = [NSString stringWithFormat:@"document.elementFromPoint(%f, %f).src",point.x,point.y];
@@ -177,7 +234,7 @@
                         
                     } completed:^(UIImage * _Nullable image, NSData * _Nullable data, NSError * _Nullable error, BOOL finished) {
                         UIImageWriteToSavedPhotosAlbum(image, self, @selector(image:didFinishSavingWithError:contextInfo:), nil);
-
+                        
                     }];
                 }]];
                 
@@ -206,6 +263,14 @@
     }
 }
 
+- (WKWebView *)webView:(WKWebView *)webView createWebViewWithConfiguration:(WKWebViewConfiguration *)configuration forNavigationAction:(WKNavigationAction *)navigationAction windowFeatures:(WKWindowFeatures *)windowFeatures
+{
+    WKFrameInfo *frameInfo = navigationAction.targetFrame;
+    if (![frameInfo isMainFrame]) {
+        [webView loadRequest:navigationAction.request];
+    }
+    return nil;
+}
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSKeyValueChangeKey,id> *)change context:(void *)context{
     
     if (object == self.kWKWebView) {
@@ -222,6 +287,49 @@
             }
         }
     }
+}
+
+- (void)webView:(WKWebView *)webView decidePolicyForNavigationAction:(WKNavigationAction *)navigationAction decisionHandler:(void (^)(WKNavigationActionPolicy))decisionHandler {
+    NSURL *url = navigationAction.request.URL;
+    NSString *scheme = [url scheme];
+    if (![scheme isEqualToString:@"https"] && ![scheme isEqualToString:@"http"]) {
+        [[UIApplication sharedApplication] openURL:url];
+    }
+    decisionHandler(WKNavigationActionPolicyAllow);
+    
+//    if (![ICTools isObjEmpty:referDict]) {
+//        NSString *url = referDict[@"url"];
+//        NSString *refer = referDict[@"refer"];
+//        NSDictionary *headers = [navigationAction.request allHTTPHeaderFields];
+//        NSString * referer = [headers objectForKey:@"Referer"];
+//        BOOL isRightReferer = [referer isEqualToString:refer];
+//        if (isRightReferer) {
+//            decisionHandler(WKNavigationActionPolicyAllow);
+//        } else {
+//            decisionHandler(WKNavigationActionPolicyCancel);
+//
+//            if ([url isEqualToString:[navigationAction.request.URL absoluteString]]) {
+//                NSMutableDictionary * muDict = [[NSMutableDictionary alloc] initWithDictionary:headers];
+//                [muDict setObject:refer forKey:@"Referer"];
+//                dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+//                    dispatch_async(dispatch_get_main_queue(), ^{
+//                        NSURL *url = [navigationAction.request URL];
+//                        NSMutableURLRequest* request = [NSMutableURLRequest requestWithURL:url cachePolicy:NSURLRequestReloadIgnoringCacheData timeoutInterval:60.0];
+//                        request.allHTTPHeaderFields = muDict;
+//                        [webView loadRequest:request];
+//                    });
+//                });
+//            }
+//            [[NSUserDefaults standardUserDefaults] removeObjectForKey:@"loadUrlWithRefer"];// 使用完成后移除
+//        }
+//    } else {
+//        NSURL *url = navigationAction.request.URL;
+//        NSString *scheme = [url scheme];
+//        if (![scheme isEqualToString:@"https"] && ![scheme isEqualToString:@"http"]) {
+//            [[UIApplication sharedApplication] openURL:url];
+//        }
+//        decisionHandler(WKNavigationActionPolicyAllow);
+//    }
 }
 
 #pragma mark -------------------------  进度条

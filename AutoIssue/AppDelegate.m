@@ -10,8 +10,8 @@
 #import "AFNetworking.h"
 #import "WKNavigationViewController.h"
 #import "WKRootViewController.h"
-
-@interface AppDelegate ()
+#import "WechatHandler.h"
+@interface AppDelegate ()<JPUSHRegisterDelegate>
 
 @end
 
@@ -23,9 +23,12 @@
     // Override point for customization after application launch.
     [self startNetworkMonitoring];
     WKRootViewController *rootVC = [[WKRootViewController alloc] init];
-//    rootVC.miniProName = @"index";
-    rootVC.miniProName = @"andong";
-
+    rootVC.miniProName = @"index";
+    //    rootVC.miniProName = @"andong";
+    [AVOSCloud setApplicationId:@"mrVViqg89FzygisjKybjpDm3-gzGzoHsz" clientKey:@"LUOXP4JpU4CaEe9aAlynnpTF"];
+    //    统计应用
+    [AVAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
+    
     WKNavigationViewController *nav = [[WKNavigationViewController alloc] initWithRootViewController:rootVC];
     nav.orientationMask = UIInterfaceOrientationMaskAll;
     
@@ -33,6 +36,23 @@
     [self.window setBackgroundColor:[UIColor whiteColor]];
     [self.window setRootViewController:nav];
     [self.window makeKeyAndVisible];
+    
+    JPUSHRegisterEntity * entity = [[JPUSHRegisterEntity alloc] init];
+    entity.types = JPAuthorizationOptionAlert|JPAuthorizationOptionBadge|JPAuthorizationOptionSound;
+    if ([[UIDevice currentDevice].systemVersion floatValue] >= 8.0) {
+        // 可以添加自定义categories
+        // NSSet<UNNotificationCategory *> *categories for iOS10 or later
+        // NSSet<UIUserNotificationCategory *> *categories for iOS8 and iOS9
+    }
+    [JPUSHService registerForRemoteNotificationConfig:entity delegate:self];
+    // Optional
+    // 获取IDFA
+    // 如需使用IDFA功能请添加此代码并在初始化方法的advertisingIdentifier参数中填写对应值
+    
+    [JPUSHService setupWithOption:launchOptions appKey:@"aace746f16fe4c3dfc373a11"
+                          channel:nil
+                 apsForProduction:YES
+            advertisingIdentifier:nil];
     
     return YES;
 }
@@ -47,6 +67,26 @@
 - (void)networkingStatusDidChanged:(NSNotification*)info{
     NSDictionary *inforDict = [info userInfo];
     NSLog(@"%@", inforDict);
+}
+
+- (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
+    
+    /// Required - 注册 DeviceToken
+    [JPUSHService registerDeviceToken:deviceToken];
+}
+
+- (BOOL)application:(UIApplication *)app openURL:(NSURL *)url options:(NSDictionary<UIApplicationOpenURLOptionsKey,id> *)options{
+    if ([WXApi handleOpenURL:url delegate:[WechatHandler sharedInstance]]) {
+        return YES;
+    }
+    return YES;
+}
+
+- (BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url{
+    if ([WXApi handleOpenURL:url delegate:[WechatHandler sharedInstance]]) {
+        return YES;
+    }
+    return YES;
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {

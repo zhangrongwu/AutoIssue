@@ -14,31 +14,59 @@ PODS:
   - AFNetworking/Serialization (3.2.1)
   - AFNetworking/UIKit (3.2.1):
     - AFNetworking/NSURLSession
+  - AVOSCloud (11.1.1)
+  - AVOSCloudIM (11.1.1):
+    - AVOSCloud (= 11.1.1)
+    - AVOSCloudIM/_ARC (= 11.1.1)
+    - AVOSCloudIM/_NOARC (= 11.1.1)
+  - AVOSCloudIM/_ARC (11.1.1):
+    - AVOSCloud (= 11.1.1)
+    - AVOSCloudIM/_NOARC (= 11.1.1)
+  - AVOSCloudIM/_NOARC (11.1.1):
+    - AVOSCloud (= 11.1.1)
+  - JCore (1.2.0)
+  - JPush (3.0.9):
+    - JCore (~> 1.2.0)
   - SDWebImage (4.4.1):
     - SDWebImage/Core (= 4.4.1)
   - SDWebImage/Core (4.4.1)
   - SVProgressHUD (2.2.5)
+  - WechatOpenSDK (1.8.2)
   - ZipArchive (1.4.0)
 
 DEPENDENCIES:
   - AFNetworking
+  - AVOSCloud
+  - AVOSCloudIM
+  - JPush
   - SDWebImage
   - SVProgressHUD
+  - WechatOpenSDK
   - ZipArchive
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - AFNetworking
+    - AVOSCloud
+    - AVOSCloudIM
+    - JCore
+    - JPush
     - SDWebImage
     - SVProgressHUD
+    - WechatOpenSDK
     - ZipArchive
 
 SPEC CHECKSUMS:
   AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
+  AVOSCloud: 61c7cf3bfd211cc26af1634f4005c5c6ba087d11
+  AVOSCloudIM: fa80b35a4784b83d78cad25c08c3cf07728f9fac
+  JCore: b52e3dd73625eec70afd1244bb9c41038aa06087
+  JPush: 48041e8c5ad2ef9b48709eb0888af9640b36e9b0
   SDWebImage: 47e9b5b925cbce75946c23f0c42dd19464189af4
   SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
+  WechatOpenSDK: 676feec516a11173eafd1fe64b10d27babf28701
   ZipArchive: e25a4373192673e3229ac8d6e9f64a3e5713c966
 
-PODFILE CHECKSUM: 64b73122c28bd0d373a0d3fef5511101adfe4338
+PODFILE CHECKSUM: 000e7b43e8498dd0f18fb8a5373f110db22744df
 
 COCOAPODS: 1.5.3

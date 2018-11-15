@@ -7,7 +7,25 @@
 		<key>AutoIssue.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>5</integer>
+			<integer>7</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>426D9D29213E52DE00122FE3</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>426D9D41213E52E000122FE3</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>426D9D4C213E52E000122FE3</key>
+		<dict>
+			<key>primary</key>
+			<true/>
 		</dict>
 	</dict>
 </dict>

@@ -5,4 +5,9 @@ target 'AutoIssue' do
     pod 'ZipArchive'
     pod 'SVProgressHUD'
     pod 'SDWebImage'
+    pod 'AVOSCloud'
+    pod 'AVOSCloudIM'
+    pod 'JPush'
+    pod 'WechatOpenSDK'
+
    end

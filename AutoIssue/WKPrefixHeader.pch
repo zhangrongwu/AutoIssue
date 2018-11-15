@@ -35,6 +35,9 @@
 #import "SVProgressHUD.h"
 #import "SDWebImageDownloader.h"
 #import "NSObject+WKExtension.h"
+#import <AVOSCloud/AVOSCloud.h>
+#import "JPUSHService.h"
+#import "WXApi.h"
 
 #define IsPortrait   [NSObject isOrientationPortrait]
 

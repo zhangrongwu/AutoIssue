@@ -7,7 +7,7 @@
 //
 
 #import "WKBottomView.h"
-
+#import "ZZUrlTool.h"
 
 @interface WKBottomView ()
 {
@@ -23,7 +23,7 @@
     self = [super initWithFrame:frame];
     if (self) {
         buttonsArray = [[NSMutableArray alloc] init];
-        [self setBackgroundColor:[UIColor whiteColor]];
+        [self setBackgroundColor:[ZZUrlTool hexColor:@"#09AC13"]];
         [self createSubViews];
     }
     return self;
@@ -31,7 +31,13 @@
 
 - (void)createSubViews{
     
-    NSArray *imageNameArr = @[@"wbackForword",@"wforword",@"wRefresh",@"whomePage",@"wuserother"];
+    NSArray *imageNameArr = [[NSArray alloc] init];
+    if ([[[NSUserDefaults standardUserDefaults] objectForKey:@"tabTinColor"] isEqualToString:@"1"]) {
+        imageNameArr = @[@"wbackForword",@"wforword",@"wRefresh",@"whomePage",@"wuserother"];
+    } else {
+        imageNameArr = @[@"wbackForword_white",@"wforword_white",@"wRefresh_white",@"whomePage_white",@"wuserother_white"];
+    }
+    
     NSInteger count = imageNameArr.count;
     CGFloat width = self.frame.size.width/count;
     CGFloat height = 49;
@@ -44,6 +50,7 @@
         [button addTarget:self action:@selector(buttonAction:) forControlEvents:UIControlEventTouchUpInside];
         [button setTag: (i+1000)];
         [self addSubview:button];
+        [button setTintColor:[UIColor whiteColor]];
         [buttonsArray addObject:button];
     }
     

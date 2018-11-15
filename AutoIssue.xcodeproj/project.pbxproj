@@ -7,10 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		420B9477215DBE8400B1DFAA /* NetworkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 420B9473215DBE8300B1DFAA /* NetworkManager.m */; };
+		420B9478215DBE8400B1DFAA /* WechatHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 420B9475215DBE8400B1DFAA /* WechatHandler.m */; };
+		420B947B215DBED300B1DFAA /* ZZUrlTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 420B947A215DBED300B1DFAA /* ZZUrlTool.m */; };
 		426D9D2F213E52DF00122FE3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 426D9D2E213E52DE00122FE3 /* AppDelegate.m */; };
 		426D9D35213E52DF00122FE3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 426D9D33213E52DF00122FE3 /* Main.storyboard */; };
 		426D9D37213E52E000122FE3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 426D9D36213E52E000122FE3 /* Assets.xcassets */; };
-		426D9D3A213E52E000122FE3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 426D9D38213E52E000122FE3 /* LaunchScreen.storyboard */; };
 		426D9D3D213E52E000122FE3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 426D9D3C213E52E000122FE3 /* main.m */; };
 		426D9D47213E52E000122FE3 /* AutoIssueTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 426D9D46213E52E000122FE3 /* AutoIssueTests.m */; };
 		426D9D52213E52E000122FE3 /* AutoIssueUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 426D9D51213E52E000122FE3 /* AutoIssueUITests.m */; };
@@ -23,6 +25,7 @@
 		426D9D80213FAD5600122FE3 /* WKBottomView.m in Sources */ = {isa = PBXBuildFile; fileRef = 426D9D7F213FAD5600122FE3 /* WKBottomView.m */; };
 		426D9D88213FB50800122FE3 /* NSObject+WKExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 426D9D87213FB50800122FE3 /* NSObject+WKExtension.m */; };
 		426D9D8A213FCDCA00122FE3 /* index.zip in Resources */ = {isa = PBXBuildFile; fileRef = 426D9D89213FCDC900122FE3 /* index.zip */; };
+		42FE393D215F4E4B00CFF252 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 42FE393C215F4E4B00CFF252 /* Images.xcassets */; };
 		EE6A6BF665C1D3BED66F060E /* libPods-AutoIssue.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 90BA2DE50194BED5CB352163 /* libPods-AutoIssue.a */; };
 /* End PBXBuildFile section */
 
@@ -46,12 +49,17 @@
 /* Begin PBXFileReference section */
 		031488E52008C33AA2B042EF /* Pods-AutoIssue.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AutoIssue.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AutoIssue/Pods-AutoIssue.debug.xcconfig"; sourceTree = "<group>"; };
 		31D56EC0732F9B5653253F5D /* Pods-AutoIssue.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AutoIssue.release.xcconfig"; path = "Pods/Target Support Files/Pods-AutoIssue/Pods-AutoIssue.release.xcconfig"; sourceTree = "<group>"; };
+		420B9473215DBE8300B1DFAA /* NetworkManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkManager.m; sourceTree = "<group>"; };
+		420B9474215DBE8400B1DFAA /* WechatHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WechatHandler.h; sourceTree = "<group>"; };
+		420B9475215DBE8400B1DFAA /* WechatHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WechatHandler.m; sourceTree = "<group>"; };
+		420B9476215DBE8400B1DFAA /* NetworkManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkManager.h; sourceTree = "<group>"; };
+		420B9479215DBED300B1DFAA /* ZZUrlTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZZUrlTool.h; sourceTree = "<group>"; };
+		420B947A215DBED300B1DFAA /* ZZUrlTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZZUrlTool.m; sourceTree = "<group>"; };
 		426D9D2A213E52DE00122FE3 /* AutoIssue.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AutoIssue.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		426D9D2D213E52DE00122FE3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		426D9D2E213E52DE00122FE3 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		426D9D34213E52DF00122FE3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		426D9D36213E52E000122FE3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		426D9D39213E52E000122FE3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		426D9D3B213E52E000122FE3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		426D9D3C213E52E000122FE3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		426D9D42213E52E000122FE3 /* AutoIssueTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AutoIssueTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -78,6 +86,7 @@
 		426D9D86213FB50800122FE3 /* NSObject+WKExtension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+WKExtension.h"; sourceTree = "<group>"; };
 		426D9D87213FB50800122FE3 /* NSObject+WKExtension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+WKExtension.m"; sourceTree = "<group>"; };
 		426D9D89213FCDC900122FE3 /* index.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = index.zip; sourceTree = "<group>"; };
+		42FE393C215F4E4B00CFF252 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		90BA2DE50194BED5CB352163 /* libPods-AutoIssue.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AutoIssue.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -140,11 +149,11 @@
 				426D9D2E213E52DE00122FE3 /* AppDelegate.m */,
 				426D9D33213E52DF00122FE3 /* Main.storyboard */,
 				426D9D36213E52E000122FE3 /* Assets.xcassets */,
-				426D9D38213E52E000122FE3 /* LaunchScreen.storyboard */,
 				426D9D89213FCDC900122FE3 /* index.zip */,
 				426D9D3B213E52E000122FE3 /* Info.plist */,
 				426D9D3C213E52E000122FE3 /* main.m */,
 				426D9D81213FAEEF00122FE3 /* WKPrefixHeader.pch */,
+				42FE393C215F4E4B00CFF252 /* Images.xcassets */,
 			);
 			path = AutoIssue;
 			sourceTree = "<group>";
@@ -179,6 +188,12 @@
 		426D9D66213E6AC700122FE3 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				420B9479215DBED300B1DFAA /* ZZUrlTool.h */,
+				420B947A215DBED300B1DFAA /* ZZUrlTool.m */,
+				420B9476215DBE8400B1DFAA /* NetworkManager.h */,
+				420B9473215DBE8300B1DFAA /* NetworkManager.m */,
+				420B9474215DBE8400B1DFAA /* WechatHandler.h */,
+				420B9475215DBE8400B1DFAA /* WechatHandler.m */,
 				426D9D60213E60E600122FE3 /* FileManager */,
 				426D9D6C213E78DF00122FE3 /* WKNetworkDownLoadManager.h */,
 				426D9D6D213E78DF00122FE3 /* WKNetworkDownLoadManager.m */,
@@ -342,7 +357,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				426D9D3A213E52E000122FE3 /* LaunchScreen.storyboard in Resources */,
+				42FE393D215F4E4B00CFF252 /* Images.xcassets in Resources */,
 				426D9D37213E52E000122FE3 /* Assets.xcassets in Resources */,
 				426D9D8A213FCDCA00122FE3 /* index.zip in Resources */,
 				426D9D35213E52DF00122FE3 /* Main.storyboard in Resources */,
@@ -373,10 +388,12 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-AutoIssue/Pods-AutoIssue-resources.sh",
+				"${PODS_ROOT}/AVOSCloud/AVOS/AVOSCloud/AVOSCloud_Art.inc",
 				"${PODS_ROOT}/SVProgressHUD/SVProgressHUD/SVProgressHUD.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/AVOSCloud_Art.inc",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/SVProgressHUD.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -412,12 +429,15 @@
 				426D9D7A213FABD200122FE3 /* WKNavigationViewController.m in Sources */,
 				426D9D74213F7E3400122FE3 /* WKMiniProgramManager.m in Sources */,
 				426D9D3D213E52E000122FE3 /* main.m in Sources */,
+				420B9477215DBE8400B1DFAA /* NetworkManager.m in Sources */,
 				426D9D77213FAB7C00122FE3 /* WKRootViewController.m in Sources */,
 				426D9D2F213E52DF00122FE3 /* AppDelegate.m in Sources */,
 				426D9D80213FAD5600122FE3 /* WKBottomView.m in Sources */,
 				426D9D7D213FAD0B00122FE3 /* WKProgressView.m in Sources */,
+				420B9478215DBE8400B1DFAA /* WechatHandler.m in Sources */,
 				426D9D88213FB50800122FE3 /* NSObject+WKExtension.m in Sources */,
 				426D9D63213E616C00122FE3 /* WKFileManager.m in Sources */,
+				420B947B215DBED300B1DFAA /* ZZUrlTool.m in Sources */,
 				426D9D6E213E78DF00122FE3 /* WKNetworkDownLoadManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -460,14 +480,6 @@
 				426D9D34213E52DF00122FE3 /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		426D9D38213E52E000122FE3 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				426D9D39213E52E000122FE3 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -588,7 +600,9 @@
 			baseConfigurationReference = 031488E52008C33AA2B042EF /* Pods-AutoIssue.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = HXA3E8963G;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = /Users/zhangrongwu/github/AutoIssue/AutoIssue/WKPrefixHeader.pch;
@@ -598,9 +612,11 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = ENN.AutoIssue;
+				PRODUCT_BUNDLE_IDENTIFIER = com.enn.bulktrade;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				PROVISIONING_PROFILE = "6d0261df-8b99-4aba-9744-75594516e40e";
+				PROVISIONING_PROFILE_SPECIFIER = BulkTradeProject_Distribution_Profiles;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -609,7 +625,9 @@
 			baseConfigurationReference = 31D56EC0732F9B5653253F5D /* Pods-AutoIssue.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = HXA3E8963G;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = /Users/zhangrongwu/github/AutoIssue/AutoIssue/WKPrefixHeader.pch;
@@ -619,9 +637,11 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = ENN.AutoIssue;
+				PRODUCT_BUNDLE_IDENTIFIER = com.enn.bulktrade;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				PROVISIONING_PROFILE = "6d0261df-8b99-4aba-9744-75594516e40e";
+				PROVISIONING_PROFILE_SPECIFIER = BulkTradeProject_Distribution_Profiles;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
